@@ -45,7 +45,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
+				<configuration>
+					<source>3.6.3</source>
+					<target>3.6.3</target>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
