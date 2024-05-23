@@ -17,7 +17,7 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public List<Post> findAll(){
+    public List<Post> findAll() {
         return postRepository.findAll();
     }
 
@@ -25,8 +25,8 @@ public class PostService {
         return postRepository.findById(id).orElse(null);
     }
 
-    public Post save(Post post) {
-        return postRepository.save(post);
+    public void save(Post post) {
+        postRepository.save(post);
     }
 
     public void delete(UUID postId) {
