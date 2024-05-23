@@ -16,6 +16,7 @@ import lombok.Setter;
 @Entity
 public class Post{
 	@Id
+	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID postID;
 	@ManyToOne
 	@JoinColumn(nullable = false)
