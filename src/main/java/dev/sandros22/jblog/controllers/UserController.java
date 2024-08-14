@@ -1,6 +1,5 @@
 package dev.sandros22.jblog.controllers;
 
-import dev.sandros22.jblog.entities.Post;
 import dev.sandros22.jblog.entities.User;
 import dev.sandros22.jblog.services.UserService;
 import jakarta.validation.Valid;
@@ -54,7 +53,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{userId}")
-    public ResponseEntity<Void> deletePost(@PathVariable UUID userId) {
+    public ResponseEntity<Void> deleteUser(@PathVariable UUID userId) {
         User user = userService.findById(userId);
         if (user == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
