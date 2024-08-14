@@ -28,6 +28,7 @@ public class Post implements Serializable {
     @ManyToOne
     @JoinColumn(nullable = false, referencedColumnName = "userID")
     private User author;
+    @Column(nullable = false)
     private String content;
     private Date postDate;
 }
