@@ -1,6 +1,6 @@
 package dev.sandros22.jblog.repositories;
 
-import dev.sandros22.jblog.entities.Post;
+import dev.sandros22.jblog.entities.post.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

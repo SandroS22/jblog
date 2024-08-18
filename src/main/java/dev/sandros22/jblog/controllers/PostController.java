@@ -1,6 +1,6 @@
 package dev.sandros22.jblog.controllers;
 
-import dev.sandros22.jblog.entities.Post;
+import dev.sandros22.jblog.entities.post.Post;
 import dev.sandros22.jblog.services.PostService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

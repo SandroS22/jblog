@@ -1,11 +1,12 @@
 package dev.sandros22.jblog.controllers;
 
-import dev.sandros22.jblog.entities.User;
+import dev.sandros22.jblog.entities.user.User;
 import dev.sandros22.jblog.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -35,7 +36,9 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<Void> createUser(@Valid @RequestBody User user) {
+        String encriptedPassword = new BCryptPasswordEncoder().encode(user.getPassword());
         user.setCreated(new Date());
+        user.setPassword(encriptedPassword);
         userService.save(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }

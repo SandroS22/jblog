@@ -1,7 +1,7 @@
 package dev.sandros22.jblog.services;
 
 
-import dev.sandros22.jblog.entities.Post;
+import dev.sandros22.jblog.entities.post.Post;
 import dev.sandros22.jblog.repositories.PostRepository;
 import org.springframework.stereotype.Service;
 

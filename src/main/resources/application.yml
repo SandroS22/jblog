@@ -10,3 +10,7 @@ spring:
         hibernate:
             ddl-auto: update
         database: postgresql
+api:
+    security:
+        token:
+            secret: ${JWT_SECRET:nao-tao-secreto}

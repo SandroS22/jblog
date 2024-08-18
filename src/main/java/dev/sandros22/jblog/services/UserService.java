@@ -1,7 +1,8 @@
 package dev.sandros22.jblog.services;
 
-import dev.sandros22.jblog.entities.User;
+import dev.sandros22.jblog.entities.user.User;
 import dev.sandros22.jblog.repositories.UserRepository;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUserByEmail(String email) {
+    public UserDetails findUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 

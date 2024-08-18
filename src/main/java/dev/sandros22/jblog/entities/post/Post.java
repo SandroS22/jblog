@@ -1,10 +1,11 @@
-package dev.sandros22.jblog.entities;
+package dev.sandros22.jblog.entities.post;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
+import dev.sandros22.jblog.entities.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
