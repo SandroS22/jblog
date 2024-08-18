@@ -29,7 +29,7 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorizeRequests ->
-                        authorizeRequests.requestMatchers(HttpMethod.DELETE, "/post").hasRole("ADMIN")
+                        authorizeRequests.requestMatchers(HttpMethod.DELETE, "/post/{postId}").hasRole("ADMIN")
                                 .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/user").permitAll()
                                 .anyRequest().authenticated())
